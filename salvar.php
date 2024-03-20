@@ -11,5 +11,5 @@ fwrite($arquivo, $email. " ; ");
 fwrite($arquivo, $veiculo. "\n");
 fclose($arquivo);
 
-
+header('location:index.php?mensagem=ok');
 ?>
