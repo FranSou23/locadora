@@ -9,12 +9,12 @@
 </head>
 <body class="bg-warning">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-6 col-12 text-center">
-                <i class="bi bi-car-front-fill text-primary" style="font-size: 2rem;"></i>
+        <div class="row mt-5">
+            <div class="col-lg-4 col-md-6 col-12 text-center bg-light shadow">
+                <i class="bi bi-car-front-fill text-warning" style="font-size: 3rem;"></i>
                 <h1>Encontre o veículo certo para você</h1>
                 <p>Preencha as informações abaixo</p>
-            <form>
+            <form action="salvar.php" method="post">
             <div class="mb-3 text-start">
                 <label class="form-label" for="nome">Nome:</label>
                 <input class="form-control" name="nome" id="nome" type="text">
@@ -25,19 +25,23 @@
             </div>
             <div class="mb-3 text-start">
                 <label class="form-label" for="veiculo">Selecione o tipo de veículo</label>
-                <select class="form-select" nome="veiculo" id="veiculo" onchange="Trocar();">
+                <select class="form-select" name="veiculo" id="veiculo" onchange="Trocar();">
                     <option value="Basico">Básico</option>
                     <option value="Esporte">Esporte</option>
                     <option value="Completo">Completo</option>
                 </select>
             </div>
             <div class="mb-3">
-                <button class="btn btn-primary w-100">Reservar</button>
+                <button class="btn btn-warning w-100 text-light fw-bolder rounded-0">FAZER MINHA RESERVA</button>
             </div>
             </form>
             </div>
             <div class="col-lg-8 col-md-6 col-12">
-                <img src="carro.png" class="img-fluid" alt="Carro Básico">
+                <h1 class="ms-3">VOCÊ PODE ALUGAR ESTÉ VEÍCULO POR R$ <span id="valor" class="text-primary fw-bolder">99</span>/DIA</h1>
+                <P class="ms-3 lead">Válido para todo território nacional</P>
+                <div class="text-center">
+                <img id=imagem src="basico.png" class="img-fluid w-75" alt="Carro Básico">
+                </div>
             </div>
         </div>
     </div>
